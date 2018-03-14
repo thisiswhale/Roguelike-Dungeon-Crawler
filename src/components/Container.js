@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
 const Title = () => (
-  <h2 className='title'>Testing</h2>
+  <h2 className="title">Testing</h2>
 );
 
 const Container = props => (
 
   <div className="container">
-      <Title />
-        {props.children}
+    <Title />
+    {props.children}
   </div>
 );
 
