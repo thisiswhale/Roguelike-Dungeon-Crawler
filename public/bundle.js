@@ -66,7 +66,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.jsx");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -347,39 +347,63 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
+/***/ "./src/app.jsx":
+/*!*********************!*\
+  !*** ./src/app.jsx ***!
+  \*********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\n__webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n\nvar _Container = __webpack_require__(/*! ./components/Container */ \"./src/components/Container.js\");\n\nvar _Container2 = _interopRequireDefault(_Container);\n\nvar _Class = __webpack_require__(/*! ./components/Class1 */ \"./src/components/Class1.js\");\n\nvar _Class2 = _interopRequireDefault(_Class);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Creating an App component which renders a ListContainer inside of a Container\nvar App = function App() {\n  return _react2.default.createElement(\n    _Container2.default,\n    null,\n    _react2.default.createElement(_Class2.default, null)\n  );\n};\n\n_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById(\"app\"));\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\n__webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n\nvar _Container = __webpack_require__(/*! ./components/Container */ \"./src/components/Container.jsx\");\n\nvar _Container2 = _interopRequireDefault(_Container);\n\nvar _Main = __webpack_require__(/*! ./components/Main */ \"./src/components/Main.jsx\");\n\nvar _Main2 = _interopRequireDefault(_Main);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar App = function App() {\n  return _react2.default.createElement(\n    _Container2.default,\n    null,\n    _react2.default.createElement(_Main2.default, null)\n  );\n};\n\n_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));\n\n//# sourceURL=webpack:///./src/app.jsx?");
 
 /***/ }),
 
-/***/ "./src/components/Class1.js":
-/*!**********************************!*\
-  !*** ./src/components/Class1.js ***!
-  \**********************************/
+/***/ "./src/components/Container.jsx":
+/*!**************************************!*\
+  !*** ./src/components/Container.jsx ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Class1 = function (_Component) {\n  _inherits(Class1, _Component);\n\n  function Class1() {\n    _classCallCheck(this, Class1);\n\n    var _this = _possibleConstructorReturn(this, (Class1.__proto__ || Object.getPrototypeOf(Class1)).call(this));\n\n    _this.hello = function () {\n      return _react2.default.createElement(\n        'h1',\n        null,\n        ' yikeas'\n      );\n    };\n\n    return _this;\n  }\n\n  _createClass(Class1, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(\n        'div',\n        null,\n        'Hello',\n        this.hello()\n      );\n    }\n  }]);\n\n  return Class1;\n}(_react.Component);\n\nexports.default = Class1;\n\n//# sourceURL=webpack:///./src/components/Class1.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Title = function Title() {\n  return _react2.default.createElement(\n    \"h2\",\n    { className: \"title\" },\n    \"Dungeon Crawler\"\n  );\n};\n\nvar Container = function Container(props) {\n  return _react2.default.createElement(\n    \"div\",\n    { className: \"container\" },\n    _react2.default.createElement(Title, null),\n    props.children\n  );\n};\n\nexports.default = Container;\n\n//# sourceURL=webpack:///./src/components/Container.jsx?");
 
 /***/ }),
 
-/***/ "./src/components/Container.js":
-/*!*************************************!*\
-  !*** ./src/components/Container.js ***!
-  \*************************************/
+/***/ "./src/components/Main.jsx":
+/*!*********************************!*\
+  !*** ./src/components/Main.jsx ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Title = function Title() {\n  return _react2.default.createElement(\n    \"h2\",\n    { className: \"title\" },\n    \"Testing\"\n  );\n};\n\nvar Container = function Container(props) {\n  return _react2.default.createElement(\n    \"div\",\n    { className: \"container\" },\n    _react2.default.createElement(Title, null),\n    props.children\n  );\n};\n\nexports.default = Container;\n\n//# sourceURL=webpack:///./src/components/Container.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _CharacterInfo = __webpack_require__(/*! ./children/CharacterInfo */ \"./src/components/children/CharacterInfo.jsx\");\n\nvar _CharacterInfo2 = _interopRequireDefault(_CharacterInfo);\n\nvar _Map = __webpack_require__(/*! ./children/Map */ \"./src/components/children/Map.jsx\");\n\nvar _Map2 = _interopRequireDefault(_Map);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Main = function (_Component) {\n  _inherits(Main, _Component);\n\n  function Main() {\n    _classCallCheck(this, Main);\n\n    var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this));\n\n    _this.rogue = {\n      level: 0,\n      health: 100,\n      weapon: 'Stick',\n      atk: 7,\n      exp: 0,\n      nextLvl: [60, 180, 210, 250]\n    };\n    _this.enemy = {\n      health: 30,\n      atk: 12\n    };\n    _this.setState({\n      dungeonLvl: 0,\n      toggleDarkness: false\n    });\n    return _this;\n  }\n\n  _createClass(Main, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(\n        'div',\n        null,\n        _react2.default.createElement(_CharacterInfo2.default, null),\n        _react2.default.createElement(_Map2.default, null)\n      );\n    }\n  }]);\n\n  return Main;\n}(_react.Component);\n\nexports.default = Main;\n\n//# sourceURL=webpack:///./src/components/Main.jsx?");
+
+/***/ }),
+
+/***/ "./src/components/children/CharacterInfo.jsx":
+/*!***************************************************!*\
+  !*** ./src/components/children/CharacterInfo.jsx ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar CharacterInfo = function (_Component) {\n  _inherits(CharacterInfo, _Component);\n\n  function CharacterInfo() {\n    _classCallCheck(this, CharacterInfo);\n\n    return _possibleConstructorReturn(this, (CharacterInfo.__proto__ || Object.getPrototypeOf(CharacterInfo)).apply(this, arguments));\n  }\n\n  _createClass(CharacterInfo, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(\n        'div',\n        null,\n        'Hello again'\n      );\n    }\n  }]);\n\n  return CharacterInfo;\n}(_react.Component);\n\nexports.default = CharacterInfo;\n\n//# sourceURL=webpack:///./src/components/children/CharacterInfo.jsx?");
+
+/***/ }),
+
+/***/ "./src/components/children/Map.jsx":
+/*!*****************************************!*\
+  !*** ./src/components/children/Map.jsx ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Map = function (_Component) {\n  _inherits(Map, _Component);\n\n  function Map() {\n    _classCallCheck(this, Map);\n\n    return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).apply(this, arguments));\n  }\n\n  _createClass(Map, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(\n        'div',\n        null,\n        'Hello I\\'m a map'\n      );\n    }\n  }]);\n\n  return Map;\n}(_react.Component);\n\nexports.default = Map;\n\n//# sourceURL=webpack:///./src/components/children/Map.jsx?");
 
 /***/ }),
 

@@ -1,9 +1,9 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/app.jsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './public')
@@ -11,10 +11,21 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: ["babel-loader","eslint-loader"]
+          loader: 'eslint-loader',
+          options: {
+            failOnError: false,
+            failOnWarning: false,
+          },
+        }
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
         }
       }, {
         test: /\.(s*)css$/,
@@ -26,7 +37,7 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
             options: {
               minimize: true
             }
@@ -35,8 +46,11 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [
-    new HtmlWebPackPlugin({template: "./src/index.html"}),
-    new ExtractTextPlugin({filename: 'app.bundle.css'})
+    new HtmlWebPackPlugin({ template: './src/index.html' }),
+    new ExtractTextPlugin({ filename: 'app.bundle.css' })
   ]
 };

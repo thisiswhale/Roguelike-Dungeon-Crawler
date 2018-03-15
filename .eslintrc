@@ -3,5 +3,9 @@
   "plugins": [
   "babel", "react", "react-native", "jsx-a11y"
   ],
+  "rules": {
+    comma-dangle: 0,
+    no-undef: 0,
+    },
   "extends": ["airbnb"]
 }
