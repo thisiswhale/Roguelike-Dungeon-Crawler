@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import CharacterInfo from './children/CharacterInfo';
-import Map from './children/Map';
+//import Map from './children/Map';
 
 export default class Main extends Component {
   constructor() {
@@ -32,7 +32,7 @@ export default class Main extends Component {
     return (
       <div>
         <CharacterInfo data={this.explorer} />
-        <Map map={this.map.level1}/>
+        {/* <Map map={this.map.level1}/> */}
       </div>
     );
   }
