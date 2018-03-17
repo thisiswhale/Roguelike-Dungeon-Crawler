@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Cell from './Cell';
 
 export default class Map extends Component {
 
   render() {
-    const rows = 30;
-    const cols = 30;
+    const rows = this.props.mapSize[0];
+    const cols = this.props.mapSize[1];
     let gridMap = [];
     let cellClass = '';
 
@@ -14,24 +15,25 @@ export default class Map extends Component {
 
       for (let j = 0; j < cols; j++) {
         let cellID=`cell${i}_${j}`;
-        cellClass=this.props.gridFull[i][j] ? 'new-cell': 'empty-cell';
+        cellClass=this.props.mapGenerated[i][j] ? 'wall-cell': 'cell';
         rowOfCells.push(
-          <td
+          <Cell
             key={cellID}
             id={cellID}
-            cellClass={cellClass}
+            cellClass = {cellClass}
             row={i}
-            col={j}
-            selectCell={this.props.selectCell}
-        />);
+            col={j} />
+          );
       }
       gridMap.push(<tr key={i} id={rowID}>{rowOfCells}</tr>);
     }
 
     return (
-      <div>
-        {gridMap}
-      </div>
+      <table>
+        <tbody className='grid'>
+          {gridMap}
+        </tbody>
+      </table>
     );
   }
 }

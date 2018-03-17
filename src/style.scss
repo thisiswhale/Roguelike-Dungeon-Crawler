@@ -1,4 +1,42 @@
+$cell-color: #ADB6BB;
+$wall-color: black;
+
 html,body {
   margin: 0;
   background-color: #B21B00;
+}
+
+.container{
+
+  table, td, th {
+    border-collapse: collapse;
+  }
+
+  table {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 5px 10px 16px 0 hsla(0, 0%, 0%, 0.2);
+    border: #222120 2px solid;
+
+    td, th {
+      border: #222120 1px solid;
+    }
+
+    td {
+      width: 10px;
+      height: 10px;
+    }
+    
+    .cell {
+      background-color: $cell-color;
+    }
+
+    .wall-cell {
+      background-color: $wall-color;
+    }
+  }
 }

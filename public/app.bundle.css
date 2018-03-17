@@ -1,3 +1,25 @@
 html, body {
   margin: 0;
   background-color: #B21B00; }
+
+.container table, .container td, .container th {
+  border-collapse: collapse; }
+
+.container table {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 5px 10px 16px 0 rgba(0, 0, 0, 0.2);
+  border: #222120 2px solid; }
+  .container table td, .container table th {
+    border: #222120 1px solid; }
+  .container table td {
+    width: 10px;
+    height: 10px; }
+  .container table .cell {
+    background-color: #ADB6BB; }
+  .container table .wall-cell {
+    background-color: black; }
