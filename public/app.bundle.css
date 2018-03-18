@@ -2,6 +2,10 @@ html, body {
   margin: 0;
   background-color: #B21B00; }
 
+.container .title {
+  text-align: center;
+  font-size: 40px; }
+
 .container table, .container td, .container th {
   border-collapse: collapse; }
 

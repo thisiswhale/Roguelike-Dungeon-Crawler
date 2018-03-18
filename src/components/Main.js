@@ -16,6 +16,7 @@ export default class Main extends Component {
       nextLvl: [60, 180, 210, 250],
     };
     this.mapSize = [[30,30]];
+    this.weapon = [['Stick', 7],['Dagger',14]]
     this.monster = {
       health: 30,
       atk: 12,
