@@ -159,6 +159,8 @@ const createDungeon = () => {
   };
   // 3. place the first room on to grid
   grid = placeCells(grid, firstRoom);
+
+  // 3a. PUT IN PLAYER IN FIRST ROOM
   // 4. Using the first room as a seed, recursivley add rooms to the grid
   const growMap = (grid, seedRooms, counter = 1, maxRooms = c.MAX_ROOMS) => {
     //think about the last and second-to-last iteration
@@ -192,21 +194,21 @@ export default class DungeonMap extends Component {
     let store = firstStore.dungeon;
 
     const cells = store.map((element, index) => {
-      return (<div className='row' key={Date.now() + index}>
+      return (
+        <div className='row' key={Date.now() + index}>
         {
           element.map((cell, i) => {
-            return (<div className={(
-                cell.type == 'floor' || cell.type == 'door')
-                ? 'cell ' + cell.type
-                : 'cell'
-} style={{
-                opacity: cell.opacity
-              }} key={i}>
-              {cell.id}
-            </div>)
-          })
+            return (
+              <div className={(
+                cell.type == 'floor' || cell.type == 'door') ? 'cell ' + cell.type : 'cell'}
+                style={{opacity: cell.opacity}}
+                key={i}>
+                {cell.id}
+              </div>)
+          });
         }
-      </div>)
+        </div>
+    );
     });
 
     return (<div className='container-map'>
