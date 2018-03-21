@@ -13,35 +13,63 @@ html,body {
     font-size: 40px;
   }
 
-  table, td, th {
-    border-collapse: collapse;
+  // table, td, th {
+  //   border-collapse: collapse;
+  // }
+  //
+  // table {
+  //   position: absolute;
+  //   top: 52%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   margin: 5px;
+  //   padding: 5px;
+  //   box-shadow: 5px 10px 16px 0 hsla(0, 0%, 0%, 0.2);
+  //   border: #222120 2px solid;
+  //
+  //   td, th {
+  //     border: #222120 1px solid;
+  //   }
+  //
+  //   td {
+  //     width: 10px;
+  //     height: 10px;
+  //   }
+  //
+  //   .cell {
+  //     background-color: $cell-color;
+  //   }
+  //
+  //   .wall-cell {
+  //     background-color: $wall-color;
+  //   }
+
+  .container-map {
+    display: flex;
+    justify-content: center;
   }
 
-  table {
-    position: absolute;
-    top: 52%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 5px;
-    padding: 5px;
-    box-shadow: 5px 10px 16px 0 hsla(0, 0%, 0%, 0.2);
-    border: #222120 2px solid;
+  .row {
+    display: flex;
+    justify-content: center;
+    color: red;
+  }
+  .table-map {
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: white;
+  }
+  .cell {
+    height: 1em;
+    width: 1em;
+    border: 1px solid black;
+    background: green;
+  }
 
-    td, th {
-      border: #222120 1px solid;
-    }
-
-    td {
-      width: 10px;
-      height: 10px;
-    }
-
-    .cell {
-      background-color: $cell-color;
-    }
-
-    .wall-cell {
-      background-color: $wall-color;
-    }
+  .floor {
+    background: #d6d1d1;
+    border: 1px solid lighten(#d6d1d1, 2%);
+  }
+  .door {
+    background: red;
   }
 }

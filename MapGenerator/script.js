@@ -34,7 +34,7 @@ const createDungeon = () => {
 }
 
 
-let firstStore= {
+let firstStore = {
   dungeon: createDungeon()
 }
 
@@ -64,8 +64,8 @@ class Dungeon extends Component {
     });
 
     return(
-      <div className='app'>
-        <div className='flex-container'>
+      <div className='container-map'>
+        <div className='table-map'>
             {cells}
         </div>
       </div>
@@ -73,9 +73,3 @@ class Dungeon extends Component {
     )
   }
 };
-
-
-ReactDOM.render(
-  <Dungeon store={firstStore.dungeon}/>,
-  document.getElementById("container")
-);
