@@ -143,23 +143,27 @@ const createDungeon = () => {
     id: 'O' // shows location of the first room on Grid
   }
 
+  const player = {
+    x: _.random(firstRoom.x , firstRoom.x + firstRoom.width - 3 ),
+    y: _.random(firstRoom.y , firstRoom.y + firstRoom.height - 3),
+    id: 'P'
+  }
+  console.log('firstRoom', firstRoom)
+  console.log('player', player)
   // 2. Place the first room on to grid
   const placeCells = (grid, { x, y, width = 1, height = 1, id }, type = 'floor') => {
     for (let i = y; i < y + height; i++) {
       for (let j = x; j < x + width; j++) {
         // the {} means that we are passing an object with 2 props, type and id
         //since we use ES6 we  dont need to say {type: type, id: id}
-        grid[i][j] = {
-        	type,
-          id
-        };
+        grid[i][j] = { type, id };
       }
     }
     return grid;
   };
   // 3. place the first room on to grid
   grid = placeCells(grid, firstRoom);
-
+  grid = placeCells(grid, player, 'player');
   // 3a. PUT IN PLAYER IN FIRST ROOM
   // 4. Using the first room as a seed, recursivley add rooms to the grid
   const growMap = (grid, seedRooms, counter = 1, maxRooms = c.MAX_ROOMS) => {
@@ -204,8 +208,8 @@ export default class DungeonMap extends Component {
                 style={{opacity: cell.opacity}}
                 key={i}>
                 {cell.id}
-              </div>)
-          });
+              </div>);
+          })
         }
         </div>
     );
@@ -218,3 +222,18 @@ export default class DungeonMap extends Component {
     </div>)
   }
 };
+
+// handleKeyDown = (e) => {
+//   if (e.keyCode == 37){
+//
+//   }
+//   else if (e.keyCode == 38){
+//
+//   }
+//   else if (e.keyCode == 39){
+//
+//   }
+//   else if (e.keyCode == 40){
+//
+//   }
+// }

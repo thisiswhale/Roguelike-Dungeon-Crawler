@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import CharacterInfo from './children/CharacterInfo';
-import Map from './children/Map';
 import DungeonMap from './children/DungeonMap';
 
 export default class Main extends Component {
