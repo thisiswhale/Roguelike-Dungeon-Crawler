@@ -127,7 +127,9 @@ const createDungeon = () => {
     for (let j = 0; j < c.GRID_WIDTH; j++) {
       grid[i].push({
         type: 0,
-        opacity: _.random(0.3, 0.8)
+        opacity: _.random(0.3, 0.8),
+        x: i,
+        y: j
       });
     }
   }
@@ -156,7 +158,7 @@ const createDungeon = () => {
       for (let j = x; j < x + width; j++) {
         // the {} means that we are passing an object with 2 props, type and id
         //since we use ES6 we  dont need to say {type: type, id: id}
-        grid[i][j] = { type, id };
+        grid[i][j] = { type, id};
       }
     }
     return grid;
@@ -196,17 +198,18 @@ export default class DungeonMap extends Component {
 
   render() {
     let store = firstStore.dungeon;
-
     const cells = store.map((element, index) => {
       return (
         <div className='row' key={Date.now() + index}>
         {
-          element.map((cell, i) => {
+          element.map( (cell, i) => {
             return (
-              <div className={(
-                cell.type == 'floor' || cell.type == 'door') ? 'cell ' + cell.type : 'cell'}
+              <div className={
+                (cell.type == 'floor' || cell.type == 'door' || cell.type == 'player') ? 'cell ' + cell.type : 'cell'}
                 style={{opacity: cell.opacity}}
-                key={i}>
+                key={i}
+                x={cell.x}
+                y={cell.y}>
                 {cell.id}
               </div>);
           })
@@ -222,18 +225,3 @@ export default class DungeonMap extends Component {
     </div>)
   }
 };
-
-// handleKeyDown = (e) => {
-//   if (e.keyCode == 37){
-//
-//   }
-//   else if (e.keyCode == 38){
-//
-//   }
-//   else if (e.keyCode == 39){
-//
-//   }
-//   else if (e.keyCode == 40){
-//
-//   }
-// }

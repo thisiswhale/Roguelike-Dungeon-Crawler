@@ -25,6 +25,9 @@ html, body {
   border: 1px solid black;
   background: green; }
 
+.container .player {
+  background: orange; }
+
 .container .floor {
   background: #d6d1d1;
   border: 1px solid #dbd6d6; }

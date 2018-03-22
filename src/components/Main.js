@@ -36,8 +36,28 @@ export default class Main extends Component {
       mapGenerated: []
     };
   }
+  handleKeyPress = (e) => {
+    if (e.key == 'ArrowRight'){
+    console.log('right arrow pressed');
+      //player (x+1,y)
+    }
+    else if (e.key == 'ArrowLeft'){
+      console.log('Left arrow pressed');
+      //player (x-1,y)
+    }
+    else if (e.key == 'ArrowDown'){
+      console.log('Down arrow pressed');
+      //player (x,y-1)
+    }
+    else if (e.key == 'ArrowUp'){
+      console.log('up arrow pressed');
+      //player (x,y+1)
+    }
+  }
 
-
+  componentWillMount() {
+        document.addEventListener("keydown", this.handleKeyPress);
+    }
 
   render() {
     return (
@@ -45,11 +65,8 @@ export default class Main extends Component {
         <CharacterInfo
           data={this.explorer}
         />
-        {/* <Map
-          mapSize={this.mapSize[0]}
-          mapGenerated={this.state.mapGenerated}
-        /> */}
-        <DungeonMap / >
+        <DungeonMap
+        />
       </div>
     );
   }
