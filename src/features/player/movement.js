@@ -39,8 +39,6 @@ export default function handleMovement(player){
         return dispatchMove('EAST');
       case 40:
         return dispatchMove('SOUTH');
-      default:
-        console.log(e.keyCode);
     };
   }
   window.addEventListener('keydown', (e) => {
