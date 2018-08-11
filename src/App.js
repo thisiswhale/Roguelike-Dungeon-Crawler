@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
-import ReactDOM from 'react-dom';
-import Player from './features/player'
+import World from './features/world'
 import './style.scss';
 
 //import Container from './features/Container';
@@ -10,7 +9,7 @@ class App extends Component{
   render(){
     return (
       <div>
-        <Player/>
+<World/>
       </div>
     )
   }

@@ -3,5 +3,8 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import './style.scss';
 import App from './App';
+import {Provider} from 'react-redux';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+import store from './config/store';
+
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('app'));
