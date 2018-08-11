@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
 
-//////////////////////////////////////algorithm part//////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////
-
 //settings
 const GRID_HEIGHT = 35;
 const GRID_WIDTH = 50;
@@ -17,7 +14,7 @@ const c = {
   ROOM_SIZE_RANGE
 };
 
-const createDungeon = () => {
+const createDungeon = (props) => {
   ////////////////HELPER FUNCTIONS GO HERE //////////////////
   const isValidRoomPlacement = (grid, { x, y, width = 1, height = 1 }) => {
     // check if on the edge of or outside of the grid
@@ -117,7 +114,7 @@ const createDungeon = () => {
 
 	  //it returns an object --> {}
 	  return {grid, placedRooms};
-};
+  };
   ////////////////////////////////////////////////////////////
   // BUILD OUT THE MAP
   // 1. Make a grid of 'empty' cells, with a random opacity value (for styling)
@@ -150,6 +147,7 @@ const createDungeon = () => {
     y: _.random(firstRoom.y , firstRoom.y + firstRoom.height - 3),
     id: 'P'
   }
+  
   console.log('firstRoom', firstRoom)
   console.log('player', player)
   // 2. Place the first room on to grid
@@ -158,7 +156,7 @@ const createDungeon = () => {
       for (let j = x; j < x + width; j++) {
         // the {} means that we are passing an object with 2 props, type and id
         //since we use ES6 we  dont need to say {type: type, id: id}
-        grid[i][j] = { type, id};
+        grid[i][j] = { type, id };
       }
     }
     return grid;
@@ -197,7 +195,7 @@ let firstStore = {
 export default class DungeonMap extends Component {
 
   render() {
-    let store = firstStore.dungeon;
+    let store = firstStore.dungeon; //
     const cells = store.map((element, index) => {
       return (
         <div className='row' key={Date.now() + index}>

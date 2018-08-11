@@ -1,16 +1,19 @@
-import React from 'react';
+import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
+import Player from './features/player'
 import './style.scss';
 
-import Container from './components/Container';
-import Main from './components/Main';
+//import Container from './features/Container';
+// import Main from './features/Main';
 
+class App extends Component{
+  render(){
+    return (
+      <div>
+        <Player/>
+      </div>
+    )
+  }
+}
 
-const App = () => (
-  <Container>
-    <Main />
-  </Container>
-);
-
-
-ReactDOM.render(<App />, document.getElementById('app'));
+export default App;

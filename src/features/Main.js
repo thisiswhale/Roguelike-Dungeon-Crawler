@@ -33,7 +33,8 @@ export default class Main extends Component {
     this.state = {
       dungeonLvl: 0,
       toggleDarkness: false,
-      mapGenerated: []
+      playerX: 0,
+      playerY: 0,
     };
   }
   handleKeyPress = (e) => {
@@ -66,6 +67,8 @@ export default class Main extends Component {
           data={this.explorer}
         />
         <DungeonMap
+          playerX={this.state.playerX}
+          playerY={this.state.playerY}
         />
       </div>
     );
