@@ -1,5 +1,6 @@
 import React from 'react';
 import {SPRITE_SIZE} from '../../config/constants';
+import './styles.css';
 
 function getTileSprite(type){
   switch(type){
@@ -19,14 +20,19 @@ function MapTile(props){
       height: SPRITE_SIZE,
       width: SPRITE_SIZE
     }}
-    >props.tile</div>
+    />
 }
 
 function MapRow(props){
-	return <div className="row">
-	{
-		props.tiles.map(tile => <MapTile tile={tile} />)
-	}
+	return <div
+    className="row"
+    style={{
+      height: SPRITE_SIZE,
+    }}
+  >
+    {
+      props.tiles.map(tile => <MapTile tile={tile} />)
+    }
 	</div>
 }
 
@@ -39,10 +45,13 @@ function Map(props){
 				left: '0px',
 				width: '800px',
 				height:'400px',
-				backgroundColor: 'green',
 				border: '4px solid white',
 			}}
-		/>
+    >
+      {
+        props.tiles.map(row => <MapRow tiles = {row} />)
+      }
+  </div>
 	)
 }
 export default Map;
